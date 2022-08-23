@@ -49,12 +49,27 @@ html {
 }
 
 body {
+    height: 100vh;
+    min-width: 100vw;
+    padding:0 15px;
+    overflow-x: hidden;
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
-
+.table-scroll::-webkit-scrollbar{
+    height: 3px;
+    background: hsl(0 0% 0% /.22);
+}
+body::-webkit-scrollbar{
+    width: 6px;
+    background: hsl(0 0% 0% /.22);
+}
+.table-scroll::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+    background: hsl(0 100% 50% / .33);
+}
 h1,
 h2,
 p {
@@ -100,8 +115,9 @@ img {
 }
 
 .section {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    /* background: red; */
+    padding-top: 3rem 1rem 2rem;
+    /* padding-bottom: 2rem; */
 }
 
 /*===== LAYOUT =====*/
@@ -266,8 +282,10 @@ img {
 }
 
 .about__container .about__text {
+
     color: hsl(0 0 0% / .87);
     font: 1.3rem system-ui;
+    text-align: left;
     line-height: 1.8;
 
 }
@@ -484,7 +502,8 @@ img {
 }
 
 .educat {
-    padding: 0 10%;
+    width: 100%;
+    padding: 0 10px;
     margin: 40px auto 0;
     display: flex;
     flex-direction: column;
@@ -498,36 +517,19 @@ img {
     margin-bottom: 40px;
 }
 
-.table {
-    width: 100;
-    border-collapse: collapse;
-}
-
-.table thead {
-    background-color: #1DA1F2;
-}
 
 .table thead tr th {
-    font-weight: 600;
-    letter-spacing: 0.35px;
-    color: #fff;
-    opacity: 1;
     padding: 12px;
-    vertical-align: top;
-    /* border: 1px solid #1DA1F2; */
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .table tr td {
     font-size: 1.2rem;
-    letter-spacing: 0.35px;
     font-weight: normal;
     color: #000;
-    /* background-color: #1DA1F2; */
     text-align: center;
-    border: 1px solid #1DA1F2;
     padding: 15px;
-    margin-bottom: 10PX;
 }
 
 .centre {
@@ -550,10 +552,10 @@ img {
 .project {
     text-align: center;
     background-color: white;
-    width: 1200px;
+    /* width: 1200px; */
     border: 10px solid rgb(54, 117, 212);
     padding: 40px;
-    margin-left: 320px;
+    margin:auto;
 
 
 
